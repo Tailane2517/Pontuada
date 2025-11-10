@@ -1,0 +1,75 @@
+/* Container principal */
+.servicos {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e6f0ff, #ffffff); /* leve degradê azul */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+/* Título */
+.servicos h2 {
+  font-size: 32px;
+  color: #004aad; /* azul predominante */
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Pequeno destaque no título */
+.servicos h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #1e90ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Lista de serviços em grade */
+.servicos ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada item como cartão */
+.servicos li {
+  flex: 1 1 200px; /* responsivo, no mínimo 200px por item */
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 18px;
+  color: #004aad;
+}
+
+/* Hover animado */
+.servicos li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  .servicos ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .servicos li {
+    flex: 1 1 100%;
+  }
+
+  .servicos h2 {
+    font-size: 28px;
+  }
+}

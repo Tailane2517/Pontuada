@@ -1,0 +1,129 @@
+/* Container principal */
+div {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #0b55c4, #ffffff); /* leve degradê azul */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 30px;
+  font-size: 32px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #1e90ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Inputs e textarea */
+input, textarea {
+  padding: 15px 20px;
+  border: 2px solid #b0cfff;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+}
+
+/* Garantir que todos tenham mesma largura */
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Textarea maior */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Botão */
+button {
+  padding: 15px;
+  background-color: #004aad;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #1e90ff;
+  transform: translateY(-2px);
+}
+
+/* Mensagens de status */
+p {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: opacity 0.3s;
+}
+
+/* Status específicos */
+p:empty {
+  display: none;
+}
+
+p.enviando {
+  background-color: #fff4c1;
+  color: #8a6d3b;
+}
+
+p.sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+p.erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  div {
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,103 @@
+/* Header principal */
+.header {
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #004aad; /* Azul predominante */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container interno */
+.header__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo e marca */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  gap: 10px;
+}
+
+/* LOGO IMAGEM */
+.brand__logo {
+  width: 45px; /* 👈 diminui o tamanho da imagem */
+  height: 45px;
+  object-fit: cover; /* garante que a imagem preencha sem distorcer */
+  border-radius: 50%; /* deixa circular */
+  border: 2px solid white; /* borda branca decorativa */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* leve brilho ao redor */
+  background-color: #ffffff22; /* fundo translúcido leve */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover na logo */
+.brand:hover .brand__logo {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Navegação */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+/* Links */
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.link:hover {
+  color: #1e90ff;
+  transform: scale(1.05);
+}
+
+/* Link ativo com underline azul */
+.link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: #1e90ff;
+  border-radius: 2px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .header__wrap {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .brand__logo {
+    width: 40px;
+    height: 40px;
+  }
+}

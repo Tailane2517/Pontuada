@@ -1,0 +1,66 @@
+/* Container principal */
+.sobre {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #e6f0ff, #ffffff); /* leve degradê azul */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #004aad; /* azul predominante */
+  text-align: left;
+  line-height: 1.8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Título */
+.sobre h2 {
+  font-size: 32px;
+  color: #004aad;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+/* Linha decorativa abaixo do título */
+.sobre h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #1e90ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Parágrafos com destaque */
+.sobre p {
+  background-color: #ffffffdd; /* leve fundo translúcido para destaque */
+  padding: 15px 20px;
+  border-left: 5px solid #1e90ff; /* barra azul lateral */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover nos parágrafos */
+.sobre p:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  .sobre {
+    padding: 30px 20px;
+  }
+
+  .sobre h2 {
+    font-size: 28px;
+  }
+
+  .sobre p {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+}
